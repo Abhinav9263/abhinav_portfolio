@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IoT-Based Smart Doorbell System</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .dark-mode {
+            background-color: #121212;
+            color: #ffffff;
+        }
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            transition: background 0.3s, color 0.3s;
+        }
+        .dark-mode .container {
+            background: #1e1e1e;
+            color: #ffffff;
+        }
+        h1 {
+            color: #20c997;
+            text-align: center;
+        }
+        .dark-mode h1 {
+            color: #bb86fc;
+        }
+        .back-button {
+            display: block;
+            width: fit-content;
+            margin: 20px auto;
+            background: #20c997;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+        .back-button:hover {
+            background: #18a383;
+        }
+        .dark-mode .back-button {
+            background: #bb86fc;
+        }
+        .dark-mode .back-button:hover {
+            background: #9a67ea;
+        }
+        .toggle-dark-mode {
+            display: block;
+            width: fit-content;
+            margin: 20px auto;
+            background: #20c997;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s ease;
+            cursor: pointer;
+        }
+        .toggle-dark-mode:hover {
+            background: #18a383;
+        }
+        .dark-mode .toggle-dark-mode {
+            background: #bb86fc;
+        }
+        .dark-mode .toggle-dark-mode:hover {
+            background: #9a67ea;
+        }
+    </style>
+</head>
+<body>
+    <button class="toggle-dark-mode" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+    <div class="container">
+        <h1>IoT-Based Smart Doorbell System</h1>
+        <img src="IoT.jpg" alt="Master Image" class="master-image" width="900" height="300">
+        <p class="details">
+            The <strong>IoT-based Smart Doorbell System</strong> is an innovative solution that enhances home security and convenience using the <strong>ESP32 microcontroller</strong> and <strong>C++ programming</strong>. This system integrates <strong>Wi-Fi connectivity</strong>, <strong>real-time notifications</strong>, and <strong>motion detection</strong>, making it an ideal choice for smart home applications.
+        </p>
+        <h2>Key Features</h2>
+        <ul class="details">
+            <li><strong>Wireless Connectivity:</strong> Uses ESP32’s built-in Wi-Fi to send alerts to a smartphone or cloud-based platform.</li>
+            <li><strong>Motion Detection:</strong> Incorporates a PIR sensor to detect movement near the door and trigger alerts.</li>
+            <li><strong>Video Streaming (Optional):</strong> Can be extended with a camera module for real-time video feed.</li>
+            <li><strong>Buzzer & LED Indication:</strong> Provides audio-visual feedback when the doorbell is pressed.</li>
+            <li><strong>Remote Access & Notifications:</strong> Sends real-time alerts to a mobile app or web dashboard.</li>
+            <li><strong>Low Power Consumption:</strong> Optimized to run efficiently on battery or power adapter.</li>
+        </ul>
+        <h2>Working Principle</h2>
+        <p class="details">
+            <ol>
+                <li>When a visitor presses the doorbell button, the ESP32 microcontroller processes the input.</li>
+                <li>A notification is sent to the user’s smartphone or cloud server.</li>
+                <li>If motion is detected, the system captures an image (if a camera is used) and logs the event.</li>
+                <li>The user can access the data remotely and respond accordingly.</li>
+            </ol>
+        </p>
+        <h2>Gallery</h2>
+        <div class="gallery">
+            <img src="IoT1.jpg" alt="Project Screenshot 1"  width="440" height="300">
+            <img src="IoT2.jpg" alt="Project Screenshot 2"  width="440" height="300">
+            <!--<img src="image3.jpg" alt="Project Screenshot 3">-->
+        </div>
+        <a href="index.html" class="back-button">Back to Home</a>
+    </div>
+    <script>
+        function toggleDarkMode() {
+            document.body.classList.toggle("dark-mode");
+        }
+    </script>
+</body>
+</html>

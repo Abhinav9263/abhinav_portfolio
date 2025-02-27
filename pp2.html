@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Prediction Using ML</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .dark-mode {
+            background-color: #121212;
+            color: #ffffff;
+        }
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            transition: background 0.3s, color 0.3s;
+        }
+        .dark-mode .container {
+            background: #1e1e1e;
+            color: #ffffff;
+        }
+        h1 {
+            color: #20c997;
+            text-align: center;
+        }
+        .dark-mode h1 {
+            color: #bb86fc;
+        }
+        .toggle-dark-mode {
+            display: block;
+            width: fit-content;
+            margin: 20px auto;
+            background: #20c997;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s ease;
+            cursor: pointer;
+        }
+        .dark-mode .toggle-dark-mode {
+            background: #bb86fc;
+        }
+        .back-button {
+            display: block;
+            width: fit-content;
+            margin: 20px auto;
+            background: #20c997;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s ease;
+            text-align: center;
+        }
+        .dark-mode .back-button {
+            background: #bb86fc;
+        }
+    </style>
+</head>
+<body>
+    <button class="toggle-dark-mode" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+    <div class="container">
+        <h1>Weather Prediction Using ML</h1>
+        <img src="ML.jpg" alt="ML Image" class="master-image" width="900" height="300">
+        <p class="details">
+            This project leverages <strong>Machine Learning</strong> to predict weather conditions based on <strong>historical data</strong>. By analyzing temperature, humidity, pressure, and other meteorological parameters, the model provides accurate forecasts to assist users in planning their activities.
+        </p>
+        <h2>Key Features</h2>
+        <ul class="details">
+            <li><strong>Data-Driven Predictions:</strong> Uses historical weather data to generate future forecasts.</li>
+            <li><strong>Multiple Parameters:</strong> Analyzes temperature, humidity, wind speed, and atmospheric pressure.</li>
+            <li><strong>Machine Learning Model:</strong> Implements algorithms like Linear Regression, Decision Trees, or Neural Networks.</li>
+            <li><strong>Real-Time Data Integration:</strong> Can be extended to integrate with live weather APIs.</li>
+            <li><strong>User-Friendly Interface:</strong> Presents data in an easy-to-understand graphical format.</li>
+        </ul>
+        <h2>Working Principle</h2>
+        <p class="details">
+            <ol>
+                <li>Collect historical weather data from various sources.</li>
+                <li>Train a Machine Learning model using supervised learning techniques.</li>
+                <li>Input real-time data to predict upcoming weather conditions.</li>
+                <li>Display forecasts with a user-friendly dashboard or web app.</li>
+            </ol>
+        </p>
+        <h2>Gallery</h2>
+        <div class="gallery">
+            <img src="ML1.jpg" alt="Weather Model Screenshot 1" width="440" height="300">
+            <img src="ML2.jpg" alt="Weather Model Screenshot 2" width="440" height="300">
+            <img src="ML3.png" alt="Weather Model Screenshot 3" width="440" height="300">
+            <img src="ML4.jpg" alt="Weather Model Screenshot 4" width="440" height="300">
+        </div>
+        <a href="index.html" class="back-button">Back to Home</a>
+    </div>
+    <script>
+        function toggleDarkMode() {
+            document.body.classList.toggle("dark-mode");
+        }
+    </script>
+</body>
+</html>
